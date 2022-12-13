@@ -1,0 +1,35 @@
+{
+  "name": "autest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "electron .",
+    "pack-mac": "electron-builder -m",
+    "pack-win": "electron-builder -w"
+  },
+  "build": {
+    "files": [
+      "package.json",
+      "./**/*.html",
+      "./**/*.js",
+      "./**/*.css",
+      "node_modules"
+    ],
+    "win": {
+      "publish": "github"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "electron-log": "^4.4.8",
+    "electron-updater": "^5.3.0"
+  }
+}
