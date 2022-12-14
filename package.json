@@ -1,15 +1,17 @@
 {
   "name": "autest",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "electron .",
     "pack-mac": "electron-builder -m",
-    "pack-win": "electron-builder -w"
+    "pack-win": "electron-builder -w",
+    "publish": "electron-builder -p always"
   },
   "build": {
+    "appId": "com.waves.autest",
     "files": [
       "package.json",
       "./**/*.html",

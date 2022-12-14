@@ -13,7 +13,9 @@ app.once("ready", () => {
     bw.loadFile(path.join(__dirname, "index.html"));
     bw.webContents.toggleDevTools(); // New!
 
-    autoUpdater.checkForUpdatesAndNotify();
+    autoUpdater.checkForUpdatesAndNotify()
+        .then(() => console.log('Checked for updates'))
+        .catch((e) => console.log(e));
 });
 
 app.on("window-all-closed", () => app.quit());
